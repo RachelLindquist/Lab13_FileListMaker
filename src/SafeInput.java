@@ -17,7 +17,6 @@ public class SafeInput {
         {
             System.out.print("\n" +prompt + ": "); // show prompt add space
             retString = pipe.nextLine();
-            pipe.nextLine();
         }while(retString.length() == 0);
 
         return retString;
@@ -173,7 +172,6 @@ public class SafeInput {
         {
             System.out.print("\n" +prompt + " (Using format " + regEx + "):"); // show prompt add space
             inputString = pipe.nextLine();
-            pipe.nextLine();
             Matcher matcher = pattern.matcher(inputString);
             match = matcher.find();
         }while(!match);
